@@ -82,11 +82,13 @@
 <meta name="keywords" content="Hexo,Node.js,Github Pages">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo之路&lt;一&gt;">
-<meta property="og:url" content="http://yoursite.com/2018/05/08/How-to-get-this/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/05/08/How-to-get-this_1/index.html">
 <meta property="og:site_name" content="Sicong·Wang·Blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/programmer2.gif">
-<meta property="og:updated_time" content="2018-05-09T13:27:30.451Z">
+<meta property="og:image" content="http://yoursite.com/image/version_test1.png">
+<meta property="og:image" content="http://yoursite.com/image/version_test2.png">
+<meta property="og:updated_time" content="2018-05-16T21:59:13.498Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo之路&lt;一&gt;">
 <meta name="twitter:image" content="http://yoursite.com/image/programmer2.gif">
@@ -119,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/08/How-to-get-this/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/08/How-to-get-this_1/"/>
 
 
 
@@ -269,6 +271,9 @@
 
 
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
  </div>
     </header>
 
@@ -292,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/08/How-to-get-this/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/08/How-to-get-this_1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sicong Wang">
@@ -360,45 +365,55 @@
 
       
         <p><img src="/image/programmer2.gif" width="80%" height="80%"><br><a id="more"></a></p>
-<h1 id="基本环境-amp-配置（具体如何配置环境请自行google）"><a href="#基本环境-amp-配置（具体如何配置环境请自行google）" class="headerlink" title="基本环境 &amp; 配置（具体如何配置环境请自行google）"></a>基本环境 &amp; 配置（具体如何配置环境请自行google）</h1><pre><code>-Node.js &amp; npm 环境
-    可以通过控制台下输入：
-        node -v
-        npm -v
-    若出现
-    &lt;img src=&quot;/image/version_test1.png&quot; width= &quot;30%&quot; height=&quot;30%&quot;&gt;
-    则说明Node.js以及npm配置成功
-- Git环境
-    同样通过控制台输入
-        git --version
-    若出现
-    &lt;img src=&quot;/image/version_test2.png&quot; width= &quot;30%&quot; height=&quot;30%&quot;&gt;
-    则说明git配置成功
-</code></pre><h1 id="在Github上创建代码库（用于存放blog的代码）"><a href="#在Github上创建代码库（用于存放blog的代码）" class="headerlink" title="在Github上创建代码库（用于存放blog的代码）"></a>在Github上创建代码库（用于存放blog的代码）</h1><pre><code>在github中创建一个新的repository,这个仓库的名字要用yourname.github.io这个形式
-（例如你的github的用户名叫ABC，那么久起名为ABC.github.io）,其他参数都默认，创建。
-</code></pre><h1 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h1><pre><code>- 在你的PC上创建一个新文件夹，你的网站的所有文件都会存在这个文件夹中
-- 打开这个空文件夹，空白处 shift + 鼠标右键，输入
-    hexo init
-  进行初始化工作，注意这一行代码只有在空文件夹下才起作用
-- 继续输入
-    npm install hexo-cli -g
-  不用担心这些warn
-- 继续输入
-    npm install hexo --save
- 到这里hexo的环境应该已经配置好了，输入
-    hexo -v
- 来检查hexo环境,如果出现一堆版本信息，则说明配置成功
-</code></pre><h1 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h1><pre><code>- 可以接着上面输入
-    hexo init
-  如果这时你的文件夹不是空的就不用输入这一行了
-- 继续输入
-    npm install
-  完成初始化
-</code></pre><h1 id="初步体验Hexo"><a href="#初步体验Hexo" class="headerlink" title="初步体验Hexo"></a>初步体验Hexo</h1><pre><code>- 继续输入
-    hexo -g
-- 输入
-    hexo -s
-  浏览器中输入localhost:4000,可以看到一个初步的Hexo页面，格式都是Hexo为我们自动生成的，可以修改
-</code></pre>
+<h1 id="1-基本环境-amp-配置（具体如何配置环境请自行google）"><a href="#1-基本环境-amp-配置（具体如何配置环境请自行google）" class="headerlink" title="1. 基本环境 &amp; 配置（具体如何配置环境请自行google）"></a>1. 基本环境 &amp; 配置（具体如何配置环境请自行google）</h1><ul>
+<li><p><strong>检查Node.js &amp; npm 环境</strong><br><img src="/image/version_test1.png" width="30%" height="30%"></p>
+</li>
+<li><p><strong>检查Git环境</strong><br><img src="/image/version_test2.png" width="40%" height="40%"></p>
+</li>
+</ul>
+<h1 id="2-在Github上创建代码库（用于上传blog代码）"><a href="#2-在Github上创建代码库（用于上传blog代码）" class="headerlink" title="2. 在Github上创建代码库（用于上传blog代码）"></a>2. 在Github上创建代码库（用于上传blog代码）</h1><ul>
+<li><strong>在github中创建一个新的repository，这个仓库的名字要用yourname.github.io这个形式</strong></li>
+<li><strong>例如: 你的github用户名叫ABC，那么仓库名必须为ABC.github.io，其他参数都默认即可</strong></li>
+</ul>
+<h1 id="3-配置Hexo"><a href="#3-配置Hexo" class="headerlink" title="3. 配置Hexo"></a>3. 配置Hexo</h1><ul>
+<li><strong>在你的PC上创建一个新文件夹，今后的所有操作都只在这个文件夹中进行（网站的所有文件都在这个文件夹中）</strong></li>
+<li><p><strong>打开这个空文件夹，空白处 shift + 鼠标右键，输入</strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>  <strong>进行初始化工作，要注意的是初始化只有在空文件夹下才起作用</strong></p>
+</li>
+<li><p><strong>继续输入</strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>  <strong>会出现一些warn，不用管它们</strong></p>
+</li>
+<li><p><strong>继续输入</strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>到这里hexo的环境应该已经配置好了，输入</strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<p>  <strong>来检查hexo环境，如果出现一堆版本信息，则说明配置成功</strong></p>
+</li>
+</ul>
+<h1 id="4-初始化Hexo"><a href="#4-初始化Hexo" class="headerlink" title="4. 初始化Hexo"></a>4. 初始化Hexo</h1><ul>
+<li><p><strong>接着上面输入</strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>  <strong>不过，如果这时你的文件夹不是空的就不用输入这一行了</strong></p>
+</li>
+<li><p><strong>继续输入</strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>  <strong>完成初始化</strong></p>
+</li>
+</ul>
+<h1 id="5-初步体验Hexo"><a href="#5-初步体验Hexo" class="headerlink" title="5. 初步体验Hexo"></a>5. 初步体验Hexo</h1><ul>
+<li><p><strong>继续输入</strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>最后输入</strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -s</span><br></pre></td></tr></table></figure>
+<p>  <strong>浏览器中输入localhost:4000，可以看到一个初步的Hexo页面，格式都是Hexo为我们自动生成的，可以修改</strong></p>
+</li>
+</ul>
+<h1 id="6-未完待续-听点儿歌吧"><a href="#6-未完待续-听点儿歌吧" class="headerlink" title="6. 未完待续 听点儿歌吧~"></a>6. 未完待续 听点儿歌吧~</h1><div class="aplayer" data-id="47190423" data-server="netease" data-type="playlist" data-mode="circulation"></div>
+
       
     </div>
     
@@ -456,8 +471,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/07/My-first-blog/" rel="next" title="My first blog!">
-                <i class="fa fa-chevron-left"></i> My first blog!
+              <a href="/2018/05/07/Untitled Document/" rel="next" title="Markdown文章示例">
+                <i class="fa fa-chevron-left"></i> Markdown文章示例
               </a>
             
           </div>
@@ -466,7 +481,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/08/Untitled Document/" rel="prev" title="Hexo之路<二>">
+              <a href="/2018/05/16/How-to-get-this_2/" rel="prev" title="Hexo之路<二>">
                 Hexo之路<二> <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -549,7 +564,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -635,7 +650,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本环境-amp-配置（具体如何配置环境请自行google）"><span class="nav-number">1.</span> <span class="nav-text">基本环境 &amp; 配置（具体如何配置环境请自行google）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在Github上创建代码库（用于存放blog的代码）"><span class="nav-number">2.</span> <span class="nav-text">在Github上创建代码库（用于存放blog的代码）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置Hexo"><span class="nav-number">3.</span> <span class="nav-text">配置Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化Hexo"><span class="nav-number">4.</span> <span class="nav-text">初始化Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初步体验Hexo"><span class="nav-number">5.</span> <span class="nav-text">初步体验Hexo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-基本环境-amp-配置（具体如何配置环境请自行google）"><span class="nav-number">1.</span> <span class="nav-text">1. 基本环境 &amp; 配置（具体如何配置环境请自行google）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-在Github上创建代码库（用于上传blog代码）"><span class="nav-number">2.</span> <span class="nav-text">2. 在Github上创建代码库（用于上传blog代码）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-配置Hexo"><span class="nav-number">3.</span> <span class="nav-text">3. 配置Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-初始化Hexo"><span class="nav-number">4.</span> <span class="nav-text">4. 初始化Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-初步体验Hexo"><span class="nav-number">5.</span> <span class="nav-text">5. 初步体验Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-未完待续-听点儿歌吧"><span class="nav-number">6.</span> <span class="nav-text">6. 未完待续 听点儿歌吧~</span></a></li></ol></div>
             
 
           </div>
@@ -647,6 +662,7 @@
 
     </div>
   </aside>
+
 
 
         
@@ -678,6 +694,8 @@
 
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
 
         
 
