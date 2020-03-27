@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,Node.js,Github Pages," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,17 +79,16 @@
 
 
 
-<meta name="keywords" content="Hexo,Node.js,Github Pages">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo之路&lt;二&gt;">
-<meta property="og:url" content="http://yoursite.com/2018/05/16/How-to-get-this_2/index.html">
+<meta name="description" content="Valar Morghulis">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sicong·Wang·Blog">
+<meta property="og:url" content="http://yoursite.com/tags/FUNDAMENT/index.html">
 <meta property="og:site_name" content="Sicong·Wang·Blog">
+<meta property="og:description" content="Valar Morghulis">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/image/programmer5.gif">
-<meta property="og:updated_time" content="2018-05-17T00:11:57.141Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo之路&lt;二&gt;">
-<meta name="twitter:image" content="http://yoursite.com/image/programmer5.gif">
+<meta name="twitter:title" content="Sicong·Wang·Blog">
+<meta name="twitter:description" content="Valar Morghulis">
 
 
 
@@ -119,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/16/How-to-get-this_2/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/FUNDAMENT/"/>
 
 
 
 
 
-  <title>Hexo之路<二> | Sicong·Wang·Blog</title>
+  <title>Tag: FUNDAMENT | Sicong·Wang·Blog</title>
   
 
 
@@ -150,7 +149,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -281,244 +280,54 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>FUNDAMENT<small>Tag</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/16/How-to-get-this_2/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sicong Wang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/the_gifted.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sicong·Wang·Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">Hexo之路<二></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2020/03/27/Fundament/" itemprop="url">
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span itemprop="name">基础知识</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-16T14:31:11-04:00">
-                2018-05-16
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p><img src="/image/programmer5.gif" width="80%" height="80%"><br><a id="more"></a></p>
-<h1 id="完成基本配置后，怎么让我们的博客更好看？"><a href="#完成基本配置后，怎么让我们的博客更好看？" class="headerlink" title="完成基本配置后，怎么让我们的博客更好看？"></a>完成基本配置后，怎么让我们的博客更好看？</h1><h2 id="1-选择一个主题"><a href="#1-选择一个主题" class="headerlink" title="1. 选择一个主题"></a>1. 选择一个主题</h2><ul>
-<li><strong>theme的选择有很多，这里推荐一个<a href="https://hexo.io/themes/index.html" target="_blank" rel="noopener"><font color="#D02090">主题网站</font></a> </strong></li>
-<li><strong>这里我选择的是使用人数最多的NEXT主题，参考的文档较多，便于入手</strong></li>
-<li><p><strong>导入hexo主题方法：</strong></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>  <strong>导入成功后，themes文件下会出现一个名为next文件夹，此时只是将next的主题包下载了下来，需要在站点配置文件中设置主题，也就是在<font color="#FF8C00">站点配置文件</font>中找到theme字段，将它的值改为你的主题名，这里我改为next</strong></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="2-两个主要配置文件"><a href="#2-两个主要配置文件" class="headerlink" title="2. 两个主要配置文件"></a>2. 两个主要配置文件</h2><ul>
-<li><strong>在根目录下的_config.yml文件，叫做<font color="#FF8C00">站点配置文件</font></strong></li>
-<li><strong>在主题目录下也会有一个_config.yml文件，叫做<font color="#FF8C00">主题配置文件</font></strong></li>
-</ul>
-<h2 id="3-看下效果"><a href="#3-看下效果" class="headerlink" title="3. 看下效果"></a>3. 看下效果</h2><ul>
-<li><p><strong>更换主题后，一般要做如下三个操作</strong></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>  <strong>然后打开<a href="http://localhost:4000" target="_blank" rel="noopener"><font color="#D02090">localhost:4000</font></a>看看效果，是不是已经变成你的主题了~</strong><br>  <strong>当然，主题中的很多插件都是默认关闭的，需要在之后的配置中根据自己的喜好设置，所以一开始看到的界面会很简单~</strong></p>
-</li>
-</ul>
-<h1 id="4-个性化域名"><a href="#4-个性化域名" class="headerlink" title="4. 个性化域名"></a>4. 个性化域名</h1><ul>
-<li><p><strong>除了在本地演示，博客还可以通过你当时创建的仓库名来访问（你的用户名.github.io），不过每次完成更新后需要</strong></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>  <strong>来发布你的更新到服务器上，如果还是没有效果，可以这样：</strong></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>  <strong>来一遍完整的~    </strong></p>
-</li>
-<li><strong>如果觉得github的域名不好记，可以在一些域名网站购买一个喜欢的域名（.com域名最好），我买的域名是<a href="http://mambawang.com" target="_blank" rel="noopener"><font color="#D02090">mambawang.com</font></a></strong></li>
-<li><p><strong>买完域名后，需要与我们的博客网站绑定，先进入博客根目录的source文件中，创建一个名为CNAME的无后缀的文件，内容为你购买的域名</strong></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mambawang.com</span><br></pre></td></tr></table></figure>
-<p>  <strong>这里不需要加www，这样以后加不加www都可以访问你的网站</strong></p>
-</li>
-<li><strong>创建完CNAME文件之后，还要去你购买域名的网站的DNS的管理界面添加以下三条记录，过一会就可以直接输入你的域名访问博客了！</strong></li>
-<li><strong>不过，不知道是什么原因，使用godaddy自带的DNS时老是出问题，后来我把DNS转到DNSPOD上，就再也没出过问题了</strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>记录类型</th>
-<th>主机记录</th>
-<th>记录值</th>
-<th>解析线路</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CNAME</td>
-<td>www</td>
-<td>用户名.github.io</td>
-<td>default</td>
-</tr>
-<tr>
-<td>A</td>
-<td>@</td>
-<td>192.30.252.153</td>
-<td>default</td>
-</tr>
-<tr>
-<td>A</td>
-<td>@</td>
-<td>192.30.252.154</td>
-<td>default</td>
-</tr>
-</tbody>
-</table>
-<h1 id="5-未完待续-听点儿歌吧"><a href="#5-未完待续-听点儿歌吧" class="headerlink" title="5. 未完待续 听点儿歌吧~"></a>5. 未完待续 听点儿歌吧~</h1><div class="aplayer" data-id="47190423" data-server="netease" data-type="playlist" data-mode="circulation"></div>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>~谢谢~</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Sicong Wang WeChat Pay"/>
-        <p>WeChat Pay</p>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2020-03-27T11:29:11-04:00"
+              content="2020-03-27" >
+          03-27
+        </time>
       </div>
-    
 
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-          
-            <a href="/tags/Node-js/" rel="tag"># Node.js</a>
-          
-            <a href="/tags/Github-Pages/" rel="tag"># Github Pages</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/05/08/How-to-get-this_1/" rel="next" title="Hexo之路<一>">
-                <i class="fa fa-chevron-left"></i> Hexo之路<一>
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/16/How-to-get-this_3/" rel="prev" title="Hexo之路<三>">
-                Hexo之路<三> <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -526,10 +335,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -550,17 +355,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -655,22 +451,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#完成基本配置后，怎么让我们的博客更好看？"><span class="nav-number">1.</span> <span class="nav-text">完成基本配置后，怎么让我们的博客更好看？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-选择一个主题"><span class="nav-number">1.1.</span> <span class="nav-text">1. 选择一个主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-两个主要配置文件"><span class="nav-number">1.2.</span> <span class="nav-text">2. 两个主要配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-看下效果"><span class="nav-number">1.3.</span> <span class="nav-text">3. 看下效果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-个性化域名"><span class="nav-number">2.</span> <span class="nav-text">4. 个性化域名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-未完待续-听点儿歌吧"><span class="nav-number">3.</span> <span class="nav-text">5. 未完待续 听点儿歌吧~</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -822,10 +602,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
