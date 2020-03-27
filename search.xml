@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[God Bless Programmer]]></title>
     <url>%2F2028%2F05%2F08%2FNeverBug%2F</url>
-    <content type="text"><![CDATA[_oo0oo_ _oo0oo_ o8888888o o8888888o 88&quot; . &quot;88 88&quot; . &quot;88 (| -_- |) (| -_- |) 0\ = /0 0\ = /0 ___/`---&apos;\___ ___/`---&apos;\___ .&apos; \\| |// &apos;. .&apos; \\| |// &apos;. / \\||| : |||// \ / \\||| : |||// \ / _||||| -:- |||||- \ / _||||| -:- |||||- \ | | \\\ - /// | | | | \\\ - /// | | | \_| &apos;&apos;\---/&apos;&apos; |_/ | | \_| &apos;&apos;\---/&apos;&apos; |_/ | \ .-\__ &apos;-&apos; ___/-. / \ .-\__ &apos;-&apos; ___/-. / ___&apos;. .&apos; /--.--\ `. .&apos;___ ___&apos;. .&apos; /--.--\ `. .&apos;___ .&quot;&quot; &apos;&lt; `.___\_&lt;|&gt;_/___.&apos; &gt;&apos; &quot;&quot;. .&quot;&quot; &apos;&lt; `.___\_&lt;|&gt;_/___.&apos; &gt;&apos; &quot;&quot;. | | : `- \`.;`\ _ /`;.`/ - ` : | | | | : `- \`.;`\ _ /`;.`/ - ` : | | \ \ `_. \_ __\ /__ _/ .-` / / \ \ `_. \_ __\ /__ _/ .-` / / =====`-.____`.___ \_____/___.-`___.-&apos;===== =====`-.____`.___ \_____/___.-`___.-&apos;===== `=---=&apos; `=---=&apos; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 写字楼里写字间，写字间里程序员； 程序人员写程序，又拿程序换酒钱。 酒醒只在网上坐，酒醉还来网下眠； 酒醉酒醒日复日，网上网下年复年。 但愿老死电脑间，不愿鞠躬老板前； 奔驰宝马贵者趣，公交自行程序员。 别人笑我忒疯癫，我笑自己命太贱； 不见满街漂亮妹，哪个归得程序员？ 不见满街漂亮妹，哪个归得程序员？]]></content>
+    <content type="text"><![CDATA[_oo0oo_ _oo0oo_ o8888888o o8888888o 88&quot; . &quot;88 88&quot; . &quot;88 (| -_- |) (| -_- |) 0\ = /0 0\ = /0 ___/`---&apos;\___ ___/`---&apos;\___ .&apos; \\| |// &apos;. .&apos; \\| |// &apos;. / \\||| : |||// \ / \\||| : |||// \ / _||||| -:- |||||- \ / _||||| -:- |||||- \ | | \\\ - /// | | | | \\\ - /// | | | \_| &apos;&apos;\---/&apos;&apos; |_/ | | \_| &apos;&apos;\---/&apos;&apos; |_/ | \ .-\__ &apos;-&apos; ___/-. / \ .-\__ &apos;-&apos; ___/-. / ___&apos;. .&apos; /--.--\ `. .&apos;___ ___&apos;. .&apos; /--.--\ `. .&apos;___ .&quot;&quot; &apos;&lt; `.___\_&lt;|&gt;_/___.&apos; &gt;&apos; &quot;&quot;. .&quot;&quot; &apos;&lt; `.___\_&lt;|&gt;_/___.&apos; &gt;&apos; &quot;&quot;. | | : `- \`.;`\ _ /`;.`/ - ` : | | | | : `- \`.;`\ _ /`;.`/ - ` : | | \ \ `_. \_ __\ /__ _/ .-` / / \ \ `_. \_ __\ /__ _/ .-` / / =====`-.____`.___ \_____/___.-`___.-&apos;===== =====`-.____`.___ \_____/___.-`___.-&apos;===== `=---=&apos; `=---=&apos; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 写字楼里写字间，写字间里程序员； 程序人员写程序，又拿程序换酒钱。 酒醒只在网上坐，酒醉还来网下眠； 酒醉酒醒日复日，网上网下年复年。 但愿老死电脑间，不愿鞠躬老板前； 奔驰宝马贵者趣，公交自行程序员。 别人笑我忒疯癫，我笑自己命太贱； 不见满街漂亮妹，哪个归得程序员？]]></content>
   </entry>
   <entry>
     <title><![CDATA[基础知识]]></title>
@@ -15,11 +15,6 @@
         <tag>INTERVIEW</tag>
         <tag>FUNDAMENT</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[test_my_site]]></title>
-    <url>%2F2020%2F03%2F27%2Ftest-my-site%2F</url>
-    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[Hexo之路]]></title>
@@ -57,6 +52,14 @@
         <tag>Hexo</tag>
         <tag>Node.js</tag>
         <tag>Github Pages</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[test_my_site]]></title>
+    <url>%2F2018%2F03%2F27%2FLog%2F</url>
+    <content type="text"><![CDATA[不能上传文章问题，解决办法：更新git版本，更改配置文件deploy中的repo地址 还有小问题是每次上传都要输密码，解决办法：]]></content>
+      <tags>
+        <tag>log</tag>
       </tags>
   </entry>
 </search>
