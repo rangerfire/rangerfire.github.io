@@ -1943,7 +1943,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cd05fc;
+  background: #ffcd5c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3254,4 +3254,10 @@ body {
   padding: 20px 0;
   color: #fff;
   background: transparent;
+}
+* {
+  cursor: url("../images/AJ1.ico"), auto;
+}
+:active {
+  cursor: url("../images/AJ1.ico"), auto;
 }

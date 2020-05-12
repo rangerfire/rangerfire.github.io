@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Sicong·Wang·Blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/LOG.png">
-<meta property="og:updated_time" content="2020-03-27T17:25:47.705Z">
+<meta property="og:updated_time" content="2020-05-12T22:11:52.750Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Log">
 <meta name="twitter:image" content="http://yoursite.com/image/LOG.png">
@@ -366,6 +366,12 @@
 <ol>
 <li>不能上传文章问题，解决办法：更新git版本，更改配置文件deploy中的repo地址</li>
 <li>还有小问题是每次上传都要输密码，解决办法：</li>
+<li>加入左下角的动画人物步骤：获取live2d npm install –save hexo-helper-live2d   ;  导入所需图形 npm install live2d-widget-model-shizuku    ;   <pre><code>在站点配置文件下添加： live2d的代码
+</code></pre></li>
+<li>更改鼠标样式尝试了一上午， 失败</li>
+<li>想写一个网页计数器，记录学习时间，看到一个不错的，搞了半天最后发现它其实用的是一个动画效果来展示时间，放弃</li>
+<li>setTimeout是JavaScript中的函数，用于延时执行某个函数，参数第一个为函数名或代码段，第二个为延时（ms）</li>
+<li>hexo本来就是静态的博客，所以把所有数据都存在本地即可，没必要浪费时间在这上</li>
 </ol>
 
       
@@ -561,6 +567,12 @@
                     <a href="https://instagram.com" target="_blank" title="Instagram">
                       
                         <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/flashcards.html" target="_blank" title="FlashCards">
+                      
+                        <i class="fa fa-fw fa-globe"></i>FlashCards</a>
                   </span>
                 
             </div>
@@ -1111,7 +1123,7 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":180,"height":360},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
 
 <!-- 点击桃心 -->
