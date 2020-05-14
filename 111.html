@@ -1,84 +1,202 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+	<link rel="stylesheet" href="buttonstyle.css">
+    <script type="text/javascript" src="xlsx.full.min.js"></script>
     <meta charset="UTF-8">
-    <title></title>
-    <script src="xlsx.full.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <title>cards</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+            background: linear-gradient(45deg,#24006b,#f42f8c)
+        }
+        .container{
+            width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+            grid-gap: 15px;
+            margin: 0 auto;
+        }
+        .container .card{
+            position: relative;
+            width: 300px;
+            height: 400px;
+            margin: 100 100 auto;
+            background: #fff;
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+
+
+        }   
+        .container .card:hover .face.face2{
+            height: 60px;;
+
+        }
+       
+        .container .card .face{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .card .face.face1{
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .container .card .face.face1 h2{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container .card .face.face2{
+            background: #111;
+            transition: 0.5s;
+        }  
+        .container .card .face.face2::before{
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 254, 0.1);
+        }
+        .container .card:nth-child(1) .face.face2{
+
+            background: linear-gradient(45deg,#e91e63,#ffeb3b);
+        }
+		.container .card:nth-child(2) .face.face2{
+            background: linear-gradient(45deg,#ccff00,#09afff);
+        }
+	
+        .container .card .face.face2 h2{
+            margin: 0;
+            padding: 0;
+            font-size: 5em;
+            color: #fff;
+            transition: .5s;
+            text-shadow: 2px 2px 6px #ccc;
+
+        }
+		
+        .container .card:hover .face.face2 h2{
+            font-size: 2em;
+        } 
+    </style>
 </head>
 
 <body>
-    <button onclick="Export(jsono)">Export</button>
-    <!--
-            ����a��ǩ����Ҫ����
-        -->
-    <a href="" download="totaltime.xlsx" id="hf"></a>
-    <script>
-        var jsono = [{ //��������
-            "hour": 100,
-            "min": 10,
-            "sec": 1
-        }];
-        var tmpDown; //�����Ķ����ƶ���
-        function Export(json, type) {
-            var tmpdata = json[0];
-            json.unshift({});
-            var keyMap = []; //��ȡkeys
-            //keyMap =Object.keys(json[0]);
-            for (var k in tmpdata) {
-                keyMap.push(k);
-                json[0][k] = k;
-            }
-          var tmpdata = [];//��������ת���õ�json 
-                json.map((v, i) => keyMap.map((k, j) => Object.assign({}, {
-                    v: v[k],
-                    position: (j > 25 ? getCharCol(j) : String.fromCharCode(65 + j)) + (i + 1)
-                }))).reduce((prev, next) => prev.concat(next)).forEach((v, i) => tmpdata[v.position] = {
-                    v: v.v
-                });
-                var outputPos = Object.keys(tmpdata); //��������,����������A1��D10
-                var tmpWB = {
-                    SheetNames: ['mySheet'], //�����ı�����
-                    Sheets: {
-                        'mySheet': Object.assign({},
-                            tmpdata, //����
-                            {
-                                '!ref': outputPos[0] + ':' + outputPos[outputPos.length - 1] //������������
-                            })
+<div>
+	<div style = "margin-left: 35%; margin-top: 100px">
+		<input type="file"  onchange="importf(this)" />
+	</div>
+	<div style = "margin-left: 30%; margin-top: 100px">
+		<button onclick = "next()"  class = "button black">next</button>
+	</div>
+	<script>
+			
+			var q1,t1,a1;		//��ʼ���������������ͣ�����
+            var wb;//��ȡ���ɵ�����
+            var rABS = false; //�Ƿ����ļ���ȡΪ�������ַ���
+			var jsondata;		//�����ϴ�����������
+			var length;			//���ݸ���
+			
+			//����importf����
+            function importf(obj) {
+                if(!obj.files) {
+                    return;
+                }
+                var f = obj.files[0];
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var data = e.target.result;
+                    if(rABS) {
+                        wb = XLSX.read(btoa(fixdata(data)), {//�ֶ�ת��
+                            type: 'base64'
+                        });
+                    } else {
+                        wb = XLSX.read(data, {
+                            type: 'binary'
+                        });
                     }
-                };
-                tmpDown = new Blob([s2ab(XLSX.write(tmpWB, 
-                    {bookType: (type == undefined ? 'xlsx':type),bookSST: false, type: 'binary'}//�������������������嵼���ĸ�ʽ����
-                    ))], {
-                    type: ""
-                }); //���������ƶ���д��ת���õ��ֽ���
-            var href = URL.createObjectURL(tmpDown); //��������������
-            document.getElementById("hf").href = href; //����a��ǩ
-            document.getElementById("hf").click(); //ģ������ʵ������
-            setTimeout(function() { //��ʱ�ͷ�
-                URL.revokeObjectURL(tmpDown); //��URL.revokeObjectURL()���ͷ�����object URL
-            }, 100);
-        }
+					
+					// XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]) ���Ǹ�json object���ص�������ô������������������Ҫ������					
+					jsondata = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+					length = jsondata.length;
+					//��ȡ����������֮������������������������һ������, Math.random() ����[0,1)��������
+					var rn = parseInt( Math.random()*(length),10);
+				
+					q1 = jsondata[rn].Description;
+					t1 = jsondata[rn].Type;
+					a1 = jsondata[rn].Answer;
 
-        function s2ab(s) { //�ַ���ת�ַ���
-            var buf = new ArrayBuffer(s.length);
-            var view = new Uint8Array(buf);
-            for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
-            return buf;
-        }
-         // ��ָ������Ȼ��ת��Ϊ26���Ʊ�ʾ��ӳ����ϵ��[0-25] -> [A-Z]��
-        function getCharCol(n) {
-            let temCol = '',
-            s = '',
-            m = 0
-            while (n > 0) {
-                m = n % 26 + 1
-                s = String.fromCharCode(m + 64) + s
-                n = (n - m) / 26
-            }
-            return s
-        }
-    </script>
+										
+                    document.getElementById("q1").innerHTML = q1;
+					document.getElementById("t1").innerHTML = t1;
+					document.getElementById("t2").innerHTML = t1;
+					document.getElementById("a1").innerHTML = a1;
+                };
+                if(rABS) {
+                    reader.readAsArrayBuffer(f);
+                } else {
+                    reader.readAsBinaryString(f);
+                }
+            }//end importf function
+			
+			//��һ������next����
+			function next() {
+				var rn = parseInt( Math.random()*(length-1),10);
+				q1 = jsondata[rn].Description;
+				t1 = jsondata[rn].Type;
+				a1 = jsondata[rn].Answer;
+									
+                document.getElementById("q1").innerHTML = q1;
+				document.getElementById("t1").innerHTML = t1;
+				document.getElementById("t2").innerHTML = t1;
+				document.getElementById("a1").innerHTML = a1;
+			}
+			
+			
+	</script>
+</div>
+
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <!-- <h2>Question</h2> -->
+                    <p id="q1"></p>
+                </div>
+            </div>
+            <div class="face face2">
+                <h2 id = "t1"></h2>
+            </div>
+           
+        </div>
+		
+		<div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <!-- <h2>Answer</h2> -->
+                    <p id = "a1"></p>
+                </div>
+            </div>
+            <div class="face face2">
+                <h2 id = "t2"></h2>
+            </div>
+        </div>
+
+    </div>
+	
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":180,"height":360},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>

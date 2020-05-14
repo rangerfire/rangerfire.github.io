@@ -1,0 +1,74 @@
+<html>
+<head>
+<script src="jquery-3.5.1.js"></script>
+<script lang="javascript" src="xlsx.full.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div>
+<input  type="file" onchange="importExcel(this)" class="filter_input form-control"/>
+
+</div>
+<script>
+   var wb;//读取完成的数据
+var rABS = false; //是否将文件读取为二进制字符串
+
+function importExcel(obj) {//导入if(obj.files.length==0) {return;
+     }
+    const IMPORTFILE_MAXSIZE = 10*1024;//这里可以自定义控制导入文件大小
+    var suffix = obj.files[0].name.split(".")[1]
+    $('#_file_path').val(obj.files[0].name);
+    if(suffix != 'xls' && suffix !='xlsx'){
+        layer.msg("Only support excel!");
+        return;
+    }
+    if(obj.files[0].size/1024 > IMPORTFILE_MAXSIZE){
+        layer.msg("The file can not over 10MB");
+        return;
+    }
+    var f = obj.files[0];
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        data = e.target.result;
+        if(rABS) {
+            wb = XLSX.read(btoa(fixdata(data)), {//手动转化
+                type: 'base64'
+            });
+        } else {
+            wb = XLSX.read(data, {
+                type: 'binary'
+            });
+        }
+        //wb.SheetNames[0]是获取Sheets中第一个Sheet的名字
+        //wb.Sheets[Sheet名]获取第一个Sheet的数据
+        var a=wb.SheetNames[0];
+        var b=wb.Sheets[a];//内容为方式2
+        data=XLSX.utils.sheet_to_json(b);//内容为方式1
+        if(!data||data==""){     
+            layer.closeAll('loading');
+            layer.msg("The file is empty please choose another file!");
+            return;
+        }
+　　　　　//在这里执行对解析后数据的处理  
+　　　　　　//var Compile_Result=Batch_Compile(data);
+
+　　　　　　//DrawTable(Compile_Result);
+
+    };
+    if(rABS) {
+        reader.readAsArrayBuffer(f);
+    } else {
+        reader.readAsBinaryString(f);
+    }
+    function fixdata(data) { //文件流转BinaryString
+        var o = "",
+            l = 0,
+            w = 10240;
+        for(; l < data.byteLength / w; ++l) o += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w, l * w + w)));
+        o += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w)));
+        return o;
+    }
+}
+</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":180,"height":360},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

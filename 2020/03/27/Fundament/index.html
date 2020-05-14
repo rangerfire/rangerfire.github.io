@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Sicong·Wang·Blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/fund.gif">
-<meta property="og:updated_time" content="2020-05-12T22:23:13.476Z">
+<meta property="og:updated_time" content="2020-05-13T22:16:08.736Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础知识">
 <meta name="twitter:image" content="http://yoursite.com/image/fund.gif">
@@ -367,6 +367,24 @@
 <li><h3 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h3><ul>
 <li>Header中的内容一般是给浏览器看的，body的内容才是真正给user看的</li>
 <li>爬虫的作用是根据tag来找到不同的内容</li>
+<li><p>用js-xlsx包读取本地excel文件时，通过XLSX.read方法会获得一个workbook对象，然后通过</p>
+<pre><code>var jsondata = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+</code></pre><p>可以获得该表内容的”json对象”。<br>json有两种数据结构：对象、数组。JSON 语法是 JavaScript 语法的子集,所以操作同JS一样。<br>   //单一对象简单形式：<br>   var o={“name”:”bty”,”age”:11,”time”:”2009-08-20”}；<br>   //单一对象复杂形式：<br>   var o2 = {</p>
+<pre><code>    &quot;list&quot;:[
+        {&quot;password&quot;:&quot;666&quot;,&quot;name&quot;:&quot;bty&quot;},
+        {&quot;password&quot;:&quot;422&quot;,&quot;name&quot;:&quot;zsn&quot;}],
+    &quot;array&quot;:[
+        {&quot;password&quot;:&quot;123&quot;,&quot;name&quot;:&quot;bty&quot;},
+        {&quot;password&quot;:&quot;452&quot;,&quot;name&quot;:&quot;zsn&quot;}]
+};
+</code></pre><p>   //数组简单形式：<br>   var jsonArr2 = [“Google”, “Runoob”, “Taobao”]<br>   //复杂形式：<br>   var jsonArr2 = [ </p>
+<pre><code>    {&quot;name&quot;:&quot;bty&quot;,&quot;age&quot;:11,&quot;time&quot;:&quot;2009-08-20&quot;},
+    {&quot;name&quot;:&quot;zsn&quot;,&quot;age&quot;:10,&quot;time&quot;:&quot;2008-08-20&quot;}  
+];
+</code></pre><p>处理这些对象的方法并不复杂，例如修改第一个name的值：</p>
+<pre><code>o2.list[0].name = &quot;sam&quot;;    //修改对象属性的值
+jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
+</code></pre></li>
 </ul>
 </li>
 </ul>

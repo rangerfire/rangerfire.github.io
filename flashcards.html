@@ -3,7 +3,12 @@
 <head>
     <script type="text/javascript" src="xlsx.full.min.js"></script>
     <title>flashcards</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="buttonstyle.css">
 </head>
 <body>
 <!--˼·:1.����div������div
@@ -18,7 +23,7 @@
 	<p id="th" style="display:inline;"></p>h&nbsp;&nbsp;
 	<p id="tm" style="display:inline;"></p>m&nbsp;&nbsp;
 	<p id="ts" style="display:inline;"></p>s&nbsp;&nbsp;
-	<input type="file" onchange="importf(this)" />
+	<input type="file" onchange="importf1(this)" />
 	<br>
 	This turn:&nbsp;&nbsp;&nbsp;
 	<p id="hour" style="display:inline;"></p>h&nbsp;&nbsp;
@@ -38,7 +43,7 @@
             var wb;//��ȡ���ɵ�����
             var rABS = false; //�Ƿ����ļ���ȡΪ�������ַ���
 
-            function importf(obj) {//����
+            function importf1(obj) {//����
                 if(!obj.files) {
                     return;
                 }
@@ -58,30 +63,11 @@
                     //wb.SheetNames[0]�ǻ�ȡSheets�е�һ��Sheet������
                     //wb.Sheets[Sheet��]��ȡ��һ��Sheet������
 					//���沽��Ϊ��ȡ��Ӧ��ʱ����
-					var mydata = JSON.stringify( XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]) );
-					
-					mydata = mydata.replace('"', '');
-					mydata = mydata.replace('"', '');
-					mydata = mydata.replace('"', '');
-					mydata = mydata.replace('"', '');
-					mydata = mydata.replace('"', '');
-					mydata = mydata.replace('"', '');
-					mydata = mydata.replace('"', '');
-					mydata = mydata.replace('"', '');
-					mydata = mydata.replace('"', '');
-					mydata = mydata.replace('"', '');
-					mydata = mydata.replace('"', '');
-					mydata = mydata.replace('"', '');
-
-					mydata = mydata.replace('[{hours:' , '');
-					mydata = mydata.replace('mins:' , '');
-					mydata = mydata.replace('secs:' , '');
-					mydata = mydata.replace('}]' , '');
-					
-					var temp = mydata.split(',');
-					th = temp[0];
-					tm = temp[1];
-					ts = temp[2];
+					var jsonArr = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]) ;
+					alert(JSON.stringify(jsonArr));
+					th = jsonArr[0].hours;
+					tm = jsonArr[0].mins;
+					ts = jsonArr[0].secs;	
                     document.getElementById("th").innerHTML = th;
 					document.getElementById("tm").innerHTML = tm;
 					document.getElementById("ts").innerHTML = ts;
@@ -217,9 +203,107 @@
 	</div>
 <!--bottom-->	
     <div class="bottom">
+	<script>
+			
+			var q1,t1,a1;		//��ʼ���������������ͣ�����
+            var wb;//��ȡ���ɵ�����
+            var rABS = false; //�Ƿ����ļ���ȡΪ�������ַ���
+			var jsondata;		//�����ϴ�����������
+			var length;			//���ݸ���
+			
+			//����importf����
+            function importf2(obj) {
+                if(!obj.files) {
+                    return;
+                }
+                var f = obj.files[0];
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var data = e.target.result;
+                    if(rABS) {
+                        wb = XLSX.read(btoa(fixdata(data)), {//�ֶ�ת��
+                            type: 'base64'
+                        });
+                    } else {
+                        wb = XLSX.read(data, {
+                            type: 'binary'
+                        });
+                    }
+					
+					// XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]) ���Ǹ�json object���ص�������ô������������������Ҫ������					
+					jsondata = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+					length = jsondata.length;
+					//��ȡ����������֮������������������������һ������, Math.random() ����[0,1)��������
+					var rn = parseInt( Math.random()*(length),10);
+				
+					q1 = jsondata[rn].Description;
+					t1 = jsondata[rn].Type;
+					a1 = jsondata[rn].Answer;
+
+										
+                    document.getElementById("q1").innerHTML = q1;
+					document.getElementById("t1").innerHTML = t1;
+					document.getElementById("t2").innerHTML = t1;
+					document.getElementById("a1").innerHTML = a1;
+                };
+                if(rABS) {
+                    reader.readAsArrayBuffer(f);
+                } else {
+                    reader.readAsBinaryString(f);
+                }
+            }//end importf2 function
+			
+			//��һ������next����
+			function next() {
+				var rn = parseInt( Math.random()*(length-1),10);
+				q1 = jsondata[rn].Description;
+				t1 = jsondata[rn].Type;
+				a1 = jsondata[rn].Answer;
+									
+                document.getElementById("q1").innerHTML = q1;
+				document.getElementById("t1").innerHTML = t1;
+				document.getElementById("t2").innerHTML = t1;
+				document.getElementById("a1").innerHTML = a1;
+			}
+			
+			
+	</script>
 	
+	<div>
+		<div style = "margin-left: 38%; margin-top: 10px; ">
+			<input type="file"  onchange="importf2(this)" />
 	
+			<button onclick = "next()"  class = "button black">next</button>
+		</div>
 	</div>
+	</div>
+		<div class="container">
+			<div class="card">
+				<div class="face face1">
+					<div class="content">
+						<p id="q1"></p>
+					</div>
+				</div>
+				<div class="face face2">
+					<h2 id = "t1"></h2>
+				</div>
+			   
+			</div>
+			
+			<div class="card">
+				<div class="face face1">
+					<div class="content">
+						<p id = "a1"></p>
+					</div>
+				</div>
+				<div class="face face2">
+					<h2 id = "t2"></h2>
+				</div>
+			</div>
+
+		</div>
+	
+	
 <!--end bottom-->	
 </div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":180,"height":360},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
