@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20200702T190000Z
+DTEND:20200702T200000Z
+DTSTAMP:20200701T201920Z
+ORGANIZER;CN=recruiting@usaccr.com:mailto:recruiting@usaccr.com
+UID:4b4fkvocjtbrh870k62157e6rn@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=recruiting@usaccr.com;X-NUM-GUESTS=0:mailto:recruiting@usaccr.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=admin@usaccr.com;X-NUM-GUESTS=0:mailto:admin@usaccr.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=rangerwangsc@gmail.com;X-NUM-GUESTS=0:mailto:rangerwangsc@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=zhiheng@besthtech.com;X-NUM-GUESTS=0:mailto:zhiheng@besthtech.com
+X-MICROSOFT-CDO-OWNERAPPTID:-1910559137
+CREATED:20200701T201916Z
+DESCRIPTION:Wechat：wsc15651885816\nPhone：  201-238-1710 \nFullstack\nMajor 
+ in CS\nOPT extension needed\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\n请勿修改说明中的这部分内容。\n\n在 https://ww
+ w.google.com/calendar/event?action=VIEW&eid=NGI0Zmt2b2NqdGJyaDg3MGs2MjE1N2U
+ 2cm4gcmFuZ2Vyd2FuZ3NjQG0&tok=MjEjcmVjcnVpdGluZ0B1c2FjY3IuY29tY2I1MDcwMGQ3NG
+ I2ZWU2NmNmN2M5OTZjZjY2ZGI0NWZiNzdkMTZiMg&ctz=America%2FNew_York&hl=zh_CN&es
+ =1 查看您的活动。\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20200701T201917Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sicong Wang Interview
+TRANSP:OPAQUE
+ATTACH;FILENAME=Sicong Wang.pdf:https://drive.google.com/a/usaccr.com/file/
+ d/1sfk15QESGY_8k81V8Ih0MxkCueyJVEX_/view?usp=drive_web
+END:VEVENT
+END:VCALENDAR
