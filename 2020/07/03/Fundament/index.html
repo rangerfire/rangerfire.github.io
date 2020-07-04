@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Sicong·Wang·Blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/fund.gif">
-<meta property="og:updated_time" content="2020-07-03T23:51:32.036Z">
+<meta property="og:updated_time" content="2020-07-03T23:59:05.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础知识">
 <meta name="twitter:image" content="http://yoursite.com/image/fund.gif">
@@ -388,10 +388,11 @@ jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
 </ul>
 </li>
 <li><h3 id="algorithm"><a href="#algorithm" class="headerlink" title="algorithm"></a>algorithm</h3><ul>
-<li>Morris方法<br>  这个方法是用来做树的中序遍历的（inorder traverse）,将之前的二叉树变成一个只有右孩子的树，且顺序时inorder的。<br>  已知中序遍历是 左-根-右 的顺序，所以我们的目的是：将“根-右子树”放到左子树的最右边的节点上，直到所有节点都不含有左孩子，从而达到我们的目的。<br>  所以该方法的流程是： 1. 以根节点root为起点，记为当前节点cur;<pre><code>2. 如果cur不存在左孩子，很好，向下走，将cur节点指向它的右孩子，即cur = cur.right;
-    否则，找到左子树中最右边的节点（rightmost node），将该节点的右孩子指向当前节点cur，即 rightmost.right = cur，然后当前节点指向它的左孩子，即cur = cur.left;
+<li>Morris方法<br>  这个方法是用来做树的中序遍历的（inorder traverse）,将之前的二叉树变成一个只有右孩子的树，且顺序时inorder的。<br>  已知中序遍历是 左-根-右 的顺序，所以我们的目的是：将“根-右子树”放到左子树的最右边的节点上，直到所有节点都不含有左孩子，从而达到我们的目的。<br>  所以该方法的流程是：    <pre><code>1. 以根节点root为起点，记为当前节点cur;
+2. 如果cur不存在左孩子，很好，向下走，将cur节点指向它的右孩子，即cur = cur.right;
+                    否则，找到左子树中最右边的节点（rightmost node），将该节点的右孩子指向当前节点cur，即 rightmost.right = cur，然后当前节点指向它的左孩子，即cur = cur.left;
 3. 重复步骤2，直到cur节点为空
-</code></pre>   经过这样的步骤之后，我们就得到了一个按inorder排列的树，如果需要记录这个遍历，只需要在步骤2的第一个判断条件成立时记录当前节点的值即可。<br>   代码(inorder遍历根节点为root的二叉树，并返回)：<br>   ‘’’)<pre><code>List&lt;Integer&gt; res = new ArrayList&lt;&gt;();
+</code></pre>   经过这样的步骤之后，我们就得到了一个按inorder排列的树，如果需要记录这个遍历，只需要在步骤2的第一个判断条件成立时记录当前节点的值即可。<br>   代码(inorder遍历根节点为root的二叉树，并返回)：<br>   ‘’’<pre><code>List&lt;Integer&gt; res = new ArrayList&lt;&gt;();
 TreeNode cur = root;
 while(cur != null)
 {
@@ -414,7 +415,7 @@ while(cur != null)
     }
 }
 return res;
-</code></pre>   ‘’’)</li>
+</code></pre>   ‘’’</li>
 </ul>
 </li>
 </ul>
