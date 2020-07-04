@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Sicong·Wang·Blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/fund.gif">
-<meta property="og:updated_time" content="2020-07-03T23:59:05.516Z">
+<meta property="og:updated_time" content="2020-07-04T00:13:40.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础知识">
 <meta name="twitter:image" content="http://yoursite.com/image/fund.gif">
@@ -392,30 +392,8 @@ jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
 2. 如果cur不存在左孩子，很好，向下走，将cur节点指向它的右孩子，即cur = cur.right;
                     否则，找到左子树中最右边的节点（rightmost node），将该节点的右孩子指向当前节点cur，即 rightmost.right = cur，然后当前节点指向它的左孩子，即cur = cur.left;
 3. 重复步骤2，直到cur节点为空
-</code></pre>   经过这样的步骤之后，我们就得到了一个按inorder排列的树，如果需要记录这个遍历，只需要在步骤2的第一个判断条件成立时记录当前节点的值即可。<br>   代码(inorder遍历根节点为root的二叉树，并返回)：<br>   ‘’’<pre><code>List&lt;Integer&gt; res = new ArrayList&lt;&gt;();
-TreeNode cur = root;
-while(cur != null)
-{
-    if(cur.left == null)
-    {
-        res.add(cur.val);
-        cur = cur.right;
-    }
-    else
-    {
-        TreeNode pre = cur.left;
-        while(pre.right != null)
-        {
-            pre = pre.right;
-        }
-        pre.right = cur;
-        TreeNode temp = cur;
-        cur = cur.left;
-        temp.left = null;
-    }
-}
-return res;
-</code></pre>   ‘’’</li>
+</code></pre>   经过这样的步骤之后，我们就得到了一个按inorder排列的树，如果需要记录这个遍历，只需要在步骤2的第一个判断条件成立时记录当前节点的值即可。<br>   代码(inorder遍历根节点为root的二叉树，并返回)：   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; res = new ArrayList&lt;&gt;();</span><br><span class="line">TreeNode cur = root;</span><br><span class="line">while(cur != null)</span><br><span class="line">&#123;</span><br><span class="line">	if(cur.left == null)</span><br><span class="line">	&#123;</span><br><span class="line">		res.add(cur.val);</span><br><span class="line">		cur = cur.right;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		TreeNode pre = cur.left;</span><br><span class="line">		while(pre.right != null)</span><br><span class="line">		&#123;</span><br><span class="line">			pre = pre.right;</span><br><span class="line">		&#125;</span><br><span class="line">		pre.right = cur;</span><br><span class="line">		TreeNode temp = cur;</span><br><span class="line">		cur = cur.left;</span><br><span class="line">		temp.left = null;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">return res;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
 </ul>
