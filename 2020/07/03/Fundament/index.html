@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Sicong·Wang·Blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/fund.gif">
-<meta property="og:updated_time" content="2020-07-04T00:13:40.427Z">
+<meta property="og:updated_time" content="2020-07-04T00:15:36.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础知识">
 <meta name="twitter:image" content="http://yoursite.com/image/fund.gif">
@@ -388,7 +388,7 @@ jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
 </ul>
 </li>
 <li><h3 id="algorithm"><a href="#algorithm" class="headerlink" title="algorithm"></a>algorithm</h3><ul>
-<li>Morris方法<br>  这个方法是用来做树的中序遍历的（inorder traverse）,将之前的二叉树变成一个只有右孩子的树，且顺序时inorder的。<br>  已知中序遍历是 左-根-右 的顺序，所以我们的目的是：将“根-右子树”放到左子树的最右边的节点上，直到所有节点都不含有左孩子，从而达到我们的目的。<br>  所以该方法的流程是：    <pre><code>1. 以根节点root为起点，记为当前节点cur;
+<li>Morris方法<br>  这个方法是用来做树的中序遍历的（inorder traverse），当然也可以直接recursive，将之前的二叉树变成一个只有右孩子的树，且顺序时inorder的。<br>  已知中序遍历是 左-根-右 的顺序，所以我们的目的是：将“根-右子树”放到左子树的最右边的节点上，直到所有节点都不含有左孩子，从而达到我们的目的。<br>  所以该方法的流程是：    <pre><code>1. 以根节点root为起点，记为当前节点cur;
 2. 如果cur不存在左孩子，很好，向下走，将cur节点指向它的右孩子，即cur = cur.right;
                     否则，找到左子树中最右边的节点（rightmost node），将该节点的右孩子指向当前节点cur，即 rightmost.right = cur，然后当前节点指向它的左孩子，即cur = cur.left;
 3. 重复步骤2，直到cur节点为空
