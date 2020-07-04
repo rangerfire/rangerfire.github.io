@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JAVA,INTERVIEW,FUNDAMENT," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="Valar Morghulis">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sicong·Wang·Blog">
-<meta property="og:url" content="http://yoursite.com/tags/Github-Pages/index.html">
+<meta name="description" content="简介 Queue是一种数据结构，与stack不同，是实现先入先出功能的线性表。 常用方法： boolean add(E e): 队尾添加一个元素，如果队列满了，会抛出异常 boolean offer(E e): 队尾添加一个元素，队列满了，返回false，不会抛出异常 E remove(): 队头删除一个元素，并返回该元素的值，当队列为空的时候，抛出异常 E poll(): 队头删除一个元素，">
+<meta name="keywords" content="JAVA,INTERVIEW,FUNDAMENT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Queue详解">
+<meta property="og:url" content="http://yoursite.com/2020/07/03/Java_Queue/index.html">
 <meta property="og:site_name" content="Sicong·Wang·Blog">
-<meta property="og:description" content="Valar Morghulis">
+<meta property="og:description" content="简介 Queue是一种数据结构，与stack不同，是实现先入先出功能的线性表。 常用方法： boolean add(E e): 队尾添加一个元素，如果队列满了，会抛出异常 boolean offer(E e): 队尾添加一个元素，队列满了，返回false，不会抛出异常 E remove(): 队头删除一个元素，并返回该元素的值，当队列为空的时候，抛出异常 E poll(): 队头删除一个元素，">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-07-04T04:04:49.851Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sicong·Wang·Blog">
-<meta name="twitter:description" content="Valar Morghulis">
+<meta name="twitter:title" content="Queue详解">
+<meta name="twitter:description" content="简介 Queue是一种数据结构，与stack不同，是实现先入先出功能的线性表。 常用方法： boolean add(E e): 队尾添加一个元素，如果队列满了，会抛出异常 boolean offer(E e): 队尾添加一个元素，队列满了，返回false，不会抛出异常 E remove(): 队头删除一个元素，并返回该元素的值，当队列为空的时候，抛出异常 E poll(): 队头删除一个元素，">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Github-Pages/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/03/Java_Queue/"/>
 
 
 
 
 
-  <title>Tag: Github Pages | Sicong·Wang·Blog</title>
+  <title>Queue详解 | Sicong·Wang·Blog</title>
   
 
 
@@ -149,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -280,110 +282,212 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Github Pages<small>Tag</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/03/Java_Queue/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sicong Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/the_gifted.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sicong·Wang·Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/05/16/How-to-get-this_2/" itemprop="url">
-              
-                <span itemprop="name">Hexo之路<二></span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Queue详解</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-16T14:31:11-04:00"
-              content="2018-05-16" >
-          05-16
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-03T11:39:11-04:00">
+                2020-07-03
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/08/How-to-get-this_1/" itemprop="url">
-              
-                <span itemprop="name">Hexo之路<一></span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-08T14:31:11-04:00"
-              content="2018-05-08" >
-          05-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/07/Untitled Document/" itemprop="url">
-              
-                <span itemprop="name">Markdown文章示例</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-07T12:55:11-04:00"
-              content="2018-05-07" >
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <a id="more"></a>
+<ul>
+<li><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ul>
+<li>Queue是一种数据结构，与stack不同，是实现先入先出功能的线性表。</li>
+<li>常用方法：<ol>
+<li>boolean add(E e): 队尾添加一个元素，如果队列满了，会抛出异常</li>
+<li>boolean offer(E e): 队尾添加一个元素，队列满了，返回false，不会抛出异常</li>
+<li>E remove(): 队头删除一个元素，并返回该元素的值，当队列为空的时候，抛出异常</li>
+<li>E poll(): 队头删除一个元素，并返回该元素的值，当队列为空的时候，不会抛出异常，会返回一个null</li>
+<li>E element(): 返回队列头部的元素，不删除它，如果队列为空，抛出异常</li>
+<li>E peek(): 返回队列头部的元素，不删除它，如果队列为空，返回null，不会抛出异常</li>
+</ol>
+</li>
+<li>Queue是一个接口，继承自Collection接口，需要被实现，Deque/PriorityQueue/ArrayDeque/LinkedList，都可以实现Queue接口</li>
+</ul>
+</li>
+<li><h3 id="PriorityQueue"><a href="#PriorityQueue" class="headerlink" title="PriorityQueue"></a>PriorityQueue</h3><ul>
+<li>优先级队列在取出元素的时候，不是按照进入的顺序取的，它是按照大小来取的，默认从小到大排列，一般情况下需要重新写一下比较器 comparator</li>
+<li>PriorityQueue，逻辑上是用堆实现的（完全二叉树），默认的时候是最小堆，物理上使用的是动态数组实现的（ArrayList）,通过按照指定方式出队，来完成有序，也就是“优先级”的作用，<br>所以，如果直接调用toString()方法，得到的结果并不是有序的，只有一个一个poll()出来，才是有序的！</li>
+<li>对于上述的toString()方法，结果为什么不是有序的，比如：offer()的顺序时5，-1, 3, 7; 那么由于它是按照最小堆的方法构成的，所以它是按照最小堆的结构去不断插入并调整<br>行加的元素，而物理上它是数组的形式，所以它的过程是：[5] -&gt; [-1, 5] -&gt; [-1, 5, 3] -&gt; [-1, 5, 3, 7]；这就是当前这个queue的存放顺序，这也是符合最小堆不是完全有序的这个<br>特性的，所以你此时调用toString()方法，它的结果是[-1, 5, 3, 7]，并不是我们想要的结果； 而当我们一个一个poll出来的时候，每次操作都会弹出堆顶的元素，然后再调整堆使它<br>继续满足最小堆，这时，我们就可以得到正确顺序的结果！</li>
+<li>PriorityQueue的默认容量是11，之后会根据情况选择扩容至2倍还是1.5倍</li>
+<li>PriorityQueue内部主要属性：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">private static final int DEFAULT_INITIAL_CAPACITY = 11;  //默认用于存储节点信息的数组的大小</span><br><span class="line">transient Object[] queue;  //用于存储节点信息的数组</span><br><span class="line">private int size = 0;  //数组中实际存放元素的个数</span><br><span class="line">private final Comparator&lt;? super E&gt; comparator;  //Comparator比较器</span><br><span class="line">transient int modCount = 0;  //用于记录修改次数的变量</span><br><span class="line"> </span><br></pre></td></tr></table></figure></li>
+<li>PriorityQueue的构造器：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public PriorityQueue() &#123;</span><br><span class="line">	this(DEFAULT_INITIAL_CAPACITY, null);</span><br><span class="line">&#125;</span><br><span class="line">public PriorityQueue(int initialCapacity) &#123;</span><br><span class="line">	this(initialCapacity, null);</span><br><span class="line">&#125;</span><br><span class="line">public PriorityQueue(Comparator&lt;? super E&gt; comparator) &#123;</span><br><span class="line">	this(DEFAULT_INITIAL_CAPACITY, comparator);</span><br><span class="line">&#125;</span><br><span class="line">public PriorityQueue(int initialCapacity,Comparator&lt;? super E&gt; comparator) &#123;</span><br><span class="line">	if (initialCapacity &lt; 1)</span><br><span class="line">		throw new IllegalArgumentException();</span><br><span class="line">	this.queue = new Object[initialCapacity];</span><br><span class="line">	this.comparator = comparator;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+实际上前面三种构造器，最后都会调用第四个构造器。</li>
+<li>对于PriorityQueue中的增删改查操作，它们在内部就是最大堆或者最小堆的增删改查操作，（注意add方法内部也调用了offer方法），添加上面已经说过，删除一个节点的步骤为<br>先判断是不是尾节点，是就直接删除，否则用记录最后一个节点的值，用它覆盖要删除的节点的值，然后先向下检查并修改使它们满足堆结构，再向上修改，使它们满足最小最大堆要求<br>即可。出队则相当于删除头节点，依次向下调整二叉树即可。</li>
+<li>下面是一个例子，包括了如何重写比较器(从大到小)：（比较器怎么记：默认情况是升序，o1<o2 ==""> o1-o2<0 ==""> o1&lt;o2的时候返回-1；如果要降序，只需o1&lt;o2的时候返回1）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">PriorityQueue pq = new PriorityQueue(</span><br><span class="line">		new Comparator() &#123;</span><br><span class="line">			@Override</span><br><span class="line">			public int compare(Object o1, Object o2) &#123;</span><br><span class="line">				if((Integer)o1 &lt;= (Integer)o2)</span><br><span class="line">					return 1;</span><br><span class="line">				else</span><br><span class="line">					return -1;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">pq.offer(1);</span><br><span class="line">pq.offer(22);</span><br><span class="line">pq.offer(4);</span><br><span class="line">pq.offer(45);</span><br><span class="line">pq.offer(12);</span><br><span class="line">pq.offer(5);</span><br><span class="line">pq.offer(76);</span><br><span class="line">pq.offer(34);</span><br><span class="line">pq.offer(23);</span><br><span class="line">pq.offer(22);</span><br><span class="line">while(pq.peek()!=null)&#123;</span><br><span class="line">	System.out.print(pq.poll() + &quot; &quot;);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure></0></o2></li>
+<li>参考：<a href="https://www.jianshu.com/p/4c7ad59a0489" target="_blank" rel="noopener">https://www.jianshu.com/p/4c7ad59a0489</a></li>
+</ul>
+</li>
+<li><h3 id="PriorityQueue-1"><a href="#PriorityQueue-1" class="headerlink" title="PriorityQueue"></a>PriorityQueue</h3> + </li>
+<li><h3 id="PriorityQueue-2"><a href="#PriorityQueue-2" class="headerlink" title="PriorityQueue"></a>PriorityQueue</h3> + </li>
+<li><h3 id="PriorityQueue-3"><a href="#PriorityQueue-3" class="headerlink" title="PriorityQueue"></a>PriorityQueue</h3> + </li>
+<li><h3 id="PriorityQueue-4"><a href="#PriorityQueue-4" class="headerlink" title="PriorityQueue"></a>PriorityQueue</h3> + </li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>~谢谢~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Sicong Wang WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+          
+            <a href="/tags/INTERVIEW/" rel="tag"># INTERVIEW</a>
+          
+            <a href="/tags/FUNDAMENT/" rel="tag"># FUNDAMENT</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/03/Fundament/" rel="next" title="基础知识">
+                <i class="fa fa-chevron-left"></i> 基础知识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2028/05/08/NeverBug/" rel="prev" title="God Bless Programmer">
+                God Bless Programmer <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -391,6 +495,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -411,8 +519,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -513,6 +630,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PriorityQueue"><span class="nav-number">2.</span> <span class="nav-text">PriorityQueue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PriorityQueue-1"><span class="nav-number">3.</span> <span class="nav-text">PriorityQueue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PriorityQueue-2"><span class="nav-number">4.</span> <span class="nav-text">PriorityQueue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PriorityQueue-3"><span class="nav-number">5.</span> <span class="nav-text">PriorityQueue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PriorityQueue-4"><span class="nav-number">6.</span> <span class="nav-text">PriorityQueue</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -664,6 +797,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
