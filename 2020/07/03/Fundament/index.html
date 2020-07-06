@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JAVA,PYTHON,INTERVIEW,FUNDAMENT," />
+  <meta name="keywords" content="JAVA,INTERVIEW,FUNDAMENT,PYTHON," />
 
 
 
@@ -79,14 +79,14 @@
 
 
 
-<meta name="keywords" content="JAVA,PYTHON,INTERVIEW,FUNDAMENT">
+<meta name="keywords" content="JAVA,INTERVIEW,FUNDAMENT,PYTHON">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基础知识">
 <meta property="og:url" content="http://yoursite.com/2020/07/03/Fundament/index.html">
 <meta property="og:site_name" content="Sicong·Wang·Blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/fund.gif">
-<meta property="og:updated_time" content="2020-07-04T02:01:00.657Z">
+<meta property="og:updated_time" content="2020-07-06T03:07:04.662Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础知识">
 <meta name="twitter:image" content="http://yoursite.com/image/fund.gif">
@@ -389,6 +389,55 @@ jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
 </li>
 <li><h3 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h3><ul>
 <li>Queue的初始化, 要用链表：’Queue<string> queue = LinkedList&lt;&gt;();</string></li>
+<li>String的indexOF方法：<ol>
+<li>public int indexOf(int ch)                        //返回指定字符第一次出现的索引，没有则返回-1</li>
+<li>public int indexOf(int ch, int fromIndex)        //返回从指定位置开始，第一次出现字符的索引，没有返回-1</li>
+<li>public int indexOf(String str)                    //查询指定子字符串substring第一次出现的索引，没找到返回-1</li>
+<li>public int indexOf(String str, int fromIndex)    //类似<br>注意：用boolean String.contains(substr)也可以快速查找是否存在子串<ul>
+<li>String.replaceAll(String regex, String replacement), 其中第一个是需要替换的部分的正则表达式，即遇到符合这个的，替换<br>注意：比如我要去掉字符串中的a,e,i,o,u（即去掉元音字母），可以这么写s.replaceAll(“[aeiou]”, “”);</li>
+<li>Java正则表达式语法：</li>
+</ul>
+</li>
+<li>. :  除\r, \n之外的任何字符</li>
+<li><ul>
+<li>： 零次或多次之前的字符，比如 “[0-9]<em>” 表示0个或多个数字；“.</em>” 表示任意多个字符</li>
+</ul>
+</li>
+<li><ul>
+<li>： 一次或多次之前的字符，比如 “[0-9]+” 表示1个或多个数字；</li>
+</ul>
+</li>
+<li>? ： 零次或一次之前的字符，比如 “ab?” 表示字符串“a”或字符串“ab”；”do(es)?”表示”do”或”does”；</li>
+<li>{n}  : 正好匹配n次，比如“o{2}” 表示“oo”</li>
+<li>{n,} : 至少匹配n次，不难推断，{0,} 与前面的 * 的用法相同；{1,} 与前面的 + 用法相同</li>
+<li>{n,m}: 至少匹配n次，至多匹配m次，不难推断 {0,1} 与前面的 ？ 用法相同</li>
+<li>？： 当此字符紧随任何其他限定符（*、+、?、{n}、{n,}、{n,m}）之后时，匹配模式是”非贪心的”。<br>“非贪心的”模式匹配搜索到的、尽可能短的字符串，而默认的”贪心的”模式匹配搜索到的、尽可能长的字符串。<br>例如，在字符串”oooo”中，”o+?”只匹配单个”o”，而”o+”匹配所有”o”。</li>
+<li>x|y  : 匹配 x 或 y。比如，“z|food” 匹配 “z” 或 “food” 。“(z|f)ood” 匹配 “zood” 或 “food”。</li>
+<li>[xyz] : 字符集，匹配包含的任一字符，比如“[abcdef]” 可以匹配 abcdef任意一个字符。</li>
+<li>[^xyz]: 反向字符集，匹配不是该集合中的字符， 比如“[^abcdef]” 可以匹配 任意一个不是abcdef的字符。</li>
+<li>[A-Z] : 字符范围，从A到Z，比如“[a-z]”表示匹配从小写a到小写z的任意一个。</li>
+<li>[^A-Z]: 反向字符范围，匹配不在这个字符范围的任意字符。</li>
+<li>\b   :  匹配一个字边界，即字与空格间的位置。例如，”er\b” 表示在边界的er, 也就是匹配”never”中的”er”，但不匹配”verb”中的”er”。</li>
+<li>\B   ： 非字边界匹配。”er\B”匹配”verb”中的”er”，但不匹配”never”中的”er”。</li>
+<li>\d   :  数字字符匹配。等效于 [0-9]。</li>
+<li>\D   :  非数字字符匹配。等效于 [^0-9]。</li>
+<li>\f   :  换页符匹配。等效于 \x0c 和 \cL。</li>
+<li>\n   :  换行符匹配。等效于 \x0a 和 \cJ。</li>
+<li>\r   :  匹配一个回车符。等效于 \x0d 和 \cM。</li>
+<li>\s   :  匹配任何空白字符，包括空格、制表符、换页符等。与 [ \f\n\r\t\v] 等效。</li>
+<li>\S   :  匹配任何非空白字符。与 [^ \f\n\r\t\v] 等效。</li>
+<li>\t   :  制表符匹配。与 \x09 和 \cI 等效。</li>
+<li>\v   :  垂直制表符匹配。与 \x0b 和 \cK 等效。</li>
+<li>\w   :  匹配任何字类字符，包括下划线。与”[A-Za-z0-9_]”等效。</li>
+<li>\W   :  与任何非单词字符匹配。与”[^A-Za-z0-9_]”等效。<br>(下面不常用)</li>
+<li>\xn  :  匹配 n，此处的 n 是一个十六进制转义码。十六进制转义码必须正好是两位数长。例如，”\x41”匹配”A”。”\x041”与”\x04”&amp;”1”等效。允许在正则表达式中使用 ASCII 代码。</li>
+<li>\num :  匹配 num，此处的 num 是一个正整数。到捕获匹配的反向引用。例如，”(.)\1”匹配两个连续的相同字符。</li>
+<li>\n   :  标识一个八进制转义码或反向引用。如果 \n 前面至少有 n 个捕获子表达式，那么 n 是反向引用。否则，如果 n 是八进制数 (0-7)，那么 n 是八进制转义码。</li>
+<li>\nm  :  标识一个八进制转义码或反向引用。如果 \nm 前面至少有 nm 个捕获子表达式，那么 nm 是反向引用。如果 \nm 前面至少有 n 个捕获，则 n 是反向引用，后面跟有字符 m。如果两种前面的情况都不存在，则 \nm 匹配八进制值 nm，其中 n 和 m 是八进制数字 (0-7)。</li>
+<li>\nml :  当 n 是八进制数 (0-3)，m 和 l 是八进制数 (0-7) 时，匹配八进制转义码 nml。</li>
+<li>\un  :  匹配 n，其中 n 是以四位十六进制数表示的 Unicode 字符。例如，\u00A9 匹配版权符号 (©)。</li>
+</ol>
+</li>
 </ul>
 </li>
 <li><h3 id="algorithm"><a href="#algorithm" class="headerlink" title="algorithm"></a>algorithm</h3><ul>
@@ -444,11 +493,11 @@ jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
           
             <a href="/tags/JAVA/" rel="tag"># JAVA</a>
           
-            <a href="/tags/PYTHON/" rel="tag"># PYTHON</a>
-          
             <a href="/tags/INTERVIEW/" rel="tag"># INTERVIEW</a>
           
             <a href="/tags/FUNDAMENT/" rel="tag"># FUNDAMENT</a>
+          
+            <a href="/tags/PYTHON/" rel="tag"># PYTHON</a>
           
         </div>
       
@@ -554,7 +603,7 @@ jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -567,7 +616,7 @@ jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
