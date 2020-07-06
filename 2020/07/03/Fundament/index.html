@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JAVA,INTERVIEW,FUNDAMENT,PYTHON," />
+  <meta name="keywords" content="JAVA,PYTHON,INTERVIEW,FUNDAMENT," />
 
 
 
@@ -79,14 +79,14 @@
 
 
 
-<meta name="keywords" content="JAVA,INTERVIEW,FUNDAMENT,PYTHON">
+<meta name="keywords" content="JAVA,PYTHON,INTERVIEW,FUNDAMENT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基础知识">
 <meta property="og:url" content="http://yoursite.com/2020/07/03/Fundament/index.html">
 <meta property="og:site_name" content="Sicong·Wang·Blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/fund.gif">
-<meta property="og:updated_time" content="2020-07-06T03:07:04.662Z">
+<meta property="og:updated_time" content="2020-07-06T03:43:04.959Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础知识">
 <meta name="twitter:image" content="http://yoursite.com/image/fund.gif">
@@ -365,10 +365,9 @@
         <p><img src="/image/fund.gif" width="80%" height="80%"><br><a id="more"></a></p>
 <ul>
 <li><h3 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h3><ul>
-<li>Header中的内容一般是给浏览器看的，body的内容才是真正给user看的</li>
-<li>爬虫的作用是根据tag来找到不同的内容</li>
-<li><p>用js-xlsx包读取本地excel文件时，通过XLSX.read方法会获得一个workbook对象，然后通过</p>
-<pre><code>var jsondata = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+<li><h4 id="Header中的内容一般是给浏览器看的，body的内容才是真正给user看的"><a href="#Header中的内容一般是给浏览器看的，body的内容才是真正给user看的" class="headerlink" title="Header中的内容一般是给浏览器看的，body的内容才是真正给user看的"></a>Header中的内容一般是给浏览器看的，body的内容才是真正给user看的</h4></li>
+<li><h4 id="爬虫的作用是根据tag来找到不同的内容"><a href="#爬虫的作用是根据tag来找到不同的内容" class="headerlink" title="爬虫的作用是根据tag来找到不同的内容"></a>爬虫的作用是根据tag来找到不同的内容</h4></li>
+<li><h4 id="用js-xlsx包读取本地excel文件时，通过XLSX-read方法会获得一个workbook对象，然后通过"><a href="#用js-xlsx包读取本地excel文件时，通过XLSX-read方法会获得一个workbook对象，然后通过" class="headerlink" title="用js-xlsx包读取本地excel文件时，通过XLSX.read方法会获得一个workbook对象，然后通过"></a>用js-xlsx包读取本地excel文件时，通过XLSX.read方法会获得一个workbook对象，然后通过</h4><pre><code>var jsondata = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
 </code></pre><p>可以获得该表内容的”json对象”。<br>json有两种数据结构：对象、数组。JSON 语法是 JavaScript 语法的子集,所以操作同JS一样。<br>   //单一对象简单形式：<br>   var o={“name”:”bty”,”age”:11,”time”:”2009-08-20”}；<br>   //单一对象复杂形式：<br>   var o2 = {</p>
 <pre><code>    &quot;list&quot;:[
         {&quot;password&quot;:&quot;666&quot;,&quot;name&quot;:&quot;bty&quot;},
@@ -388,48 +387,42 @@ jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
 </ul>
 </li>
 <li><h3 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h3><ul>
-<li>Queue的初始化, 要用链表：’Queue<string> queue = LinkedList&lt;&gt;();</string></li>
-<li>String的indexOF方法：<ol>
+<li><h4 id="Queue的初始化-要用链表：’Queue-queue-LinkedList-lt-gt"><a href="#Queue的初始化-要用链表：’Queue-queue-LinkedList-lt-gt" class="headerlink" title="Queue的初始化, 要用链表：’Queue queue = LinkedList&lt;&gt;();"></a>Queue的初始化, 要用链表：’Queue<string> queue = LinkedList&lt;&gt;();</string></h4></li>
+<li><h4 id="String的indexOF方法："><a href="#String的indexOF方法：" class="headerlink" title="String的indexOF方法："></a>String的indexOF方法：</h4><ol>
 <li>public int indexOf(int ch)                        //返回指定字符第一次出现的索引，没有则返回-1</li>
 <li>public int indexOf(int ch, int fromIndex)        //返回从指定位置开始，第一次出现字符的索引，没有返回-1</li>
 <li>public int indexOf(String str)                    //查询指定子字符串substring第一次出现的索引，没找到返回-1</li>
-<li>public int indexOf(String str, int fromIndex)    //类似<br>注意：用boolean String.contains(substr)也可以快速查找是否存在子串<ul>
-<li>String.replaceAll(String regex, String replacement), 其中第一个是需要替换的部分的正则表达式，即遇到符合这个的，替换<br>注意：比如我要去掉字符串中的a,e,i,o,u（即去掉元音字母），可以这么写s.replaceAll(“[aeiou]”, “”);</li>
-<li>Java正则表达式语法：</li>
-</ul>
+<li>public int indexOf(String str, int fromIndex)    //类似<br>注意：用boolean String.contains(substr)也可以快速查找是否存在子串</li>
+</ol>
 </li>
-<li>. :  除\r, \n之外的任何字符</li>
-<li><ul>
-<li>： 零次或多次之前的字符，比如 “[0-9]<em>” 表示0个或多个数字；“.</em>” 表示任意多个字符</li>
-</ul>
-</li>
-<li><ul>
-<li>： 一次或多次之前的字符，比如 “[0-9]+” 表示1个或多个数字；</li>
-</ul>
-</li>
-<li>? ： 零次或一次之前的字符，比如 “ab?” 表示字符串“a”或字符串“ab”；”do(es)?”表示”do”或”does”；</li>
-<li>{n}  : 正好匹配n次，比如“o{2}” 表示“oo”</li>
-<li>{n,} : 至少匹配n次，不难推断，{0,} 与前面的 * 的用法相同；{1,} 与前面的 + 用法相同</li>
-<li>{n,m}: 至少匹配n次，至多匹配m次，不难推断 {0,1} 与前面的 ？ 用法相同</li>
-<li>？： 当此字符紧随任何其他限定符（*、+、?、{n}、{n,}、{n,m}）之后时，匹配模式是”非贪心的”。<br>“非贪心的”模式匹配搜索到的、尽可能短的字符串，而默认的”贪心的”模式匹配搜索到的、尽可能长的字符串。<br>例如，在字符串”oooo”中，”o+?”只匹配单个”o”，而”o+”匹配所有”o”。</li>
-<li>x|y  : 匹配 x 或 y。比如，“z|food” 匹配 “z” 或 “food” 。“(z|f)ood” 匹配 “zood” 或 “food”。</li>
-<li>[xyz] : 字符集，匹配包含的任一字符，比如“[abcdef]” 可以匹配 abcdef任意一个字符。</li>
-<li>[^xyz]: 反向字符集，匹配不是该集合中的字符， 比如“[^abcdef]” 可以匹配 任意一个不是abcdef的字符。</li>
-<li>[A-Z] : 字符范围，从A到Z，比如“[a-z]”表示匹配从小写a到小写z的任意一个。</li>
-<li>[^A-Z]: 反向字符范围，匹配不在这个字符范围的任意字符。</li>
-<li>\b   :  匹配一个字边界，即字与空格间的位置。例如，”er\b” 表示在边界的er, 也就是匹配”never”中的”er”，但不匹配”verb”中的”er”。</li>
-<li>\B   ： 非字边界匹配。”er\B”匹配”verb”中的”er”，但不匹配”never”中的”er”。</li>
-<li>\d   :  数字字符匹配。等效于 [0-9]。</li>
-<li>\D   :  非数字字符匹配。等效于 [^0-9]。</li>
-<li>\f   :  换页符匹配。等效于 \x0c 和 \cL。</li>
-<li>\n   :  换行符匹配。等效于 \x0a 和 \cJ。</li>
-<li>\r   :  匹配一个回车符。等效于 \x0d 和 \cM。</li>
-<li>\s   :  匹配任何空白字符，包括空格、制表符、换页符等。与 [ \f\n\r\t\v] 等效。</li>
-<li>\S   :  匹配任何非空白字符。与 [^ \f\n\r\t\v] 等效。</li>
-<li>\t   :  制表符匹配。与 \x09 和 \cI 等效。</li>
-<li>\v   :  垂直制表符匹配。与 \x0b 和 \cK 等效。</li>
-<li>\w   :  匹配任何字类字符，包括下划线。与”[A-Za-z0-9_]”等效。</li>
-<li>\W   :  与任何非单词字符匹配。与”[^A-Za-z0-9_]”等效。<br>(下面不常用)</li>
+<li><h4 id="String-replaceAll-String-regex-String-replacement-其中第一个是需要替换的部分的正则表达式，即遇到符合这个的，替换"><a href="#String-replaceAll-String-regex-String-replacement-其中第一个是需要替换的部分的正则表达式，即遇到符合这个的，替换" class="headerlink" title="String.replaceAll(String regex, String replacement), 其中第一个是需要替换的部分的正则表达式，即遇到符合这个的，替换"></a>String.replaceAll(String regex, String replacement), 其中第一个是需要替换的部分的正则表达式，即遇到符合这个的，替换</h4>   注意：比如我要去掉字符串中的a,e,i,o,u（即去掉元音字母），可以这么写s.replaceAll(“[aeiou]”, “”);</li>
+<li><h4 id="Java正则表达式语法："><a href="#Java正则表达式语法：" class="headerlink" title="Java正则表达式语法："></a>Java正则表达式语法：</h4><ol>
+<li>&nbsp;  <strong>.</strong> &nbsp;&nbsp;  :  除\r, \n之外的任何字符</li>
+<li>&nbsp;  <strong>*</strong> &nbsp;&nbsp;  ： 零次或多次之前的字符，比如 “[0-9]<strong>*</strong>” 表示0个或多个数字；“.<strong>*</strong>” 表示任意多个字符</li>
+<li>&nbsp;  <strong>+</strong> &nbsp;&nbsp;  ： 一次或多次之前的字符，比如 “[0-9]+” 表示1个或多个数字；</li>
+<li><strong>?</strong> &nbsp;&nbsp;： 零次或一次之前的字符，比如 “ab?” 表示字符串“a”或字符串“ab”；”do(es)?”表示”do”或”does”；</li>
+<li><strong>{n}</strong> &nbsp;&nbsp; : 正好匹配n次，比如“o{2}” 表示“oo”</li>
+<li><strong>{n,}</strong> &nbsp;&nbsp;: 至少匹配n次，不难推断，{0,} 与前面的 * 的用法相同；{1,} 与前面的 + 用法相同</li>
+<li><strong>{n,m}</strong> &nbsp;&nbsp;: 至少匹配n次，至多匹配m次，不难推断 {0,1} 与前面的 ？ 用法相同</li>
+<li><strong>？</strong> &nbsp;&nbsp; ： 当此字符紧随任何其他限定符（*、+、?、{n}、{n,}、{n,m}）之后时，匹配模式是”非贪心的”。<br>“非贪心的”模式匹配搜索到的、尽可能短的字符串，而默认的”贪心的”模式匹配搜索到的、尽可能长的字符串。<br>例如，在字符串”oooo”中，”o+?”只匹配单个”o”，而”o+”匹配所有”o”</li>
+<li><strong>  x|y </strong> &nbsp;&nbsp;: 匹配 x 或 y。比如，“z|food” 匹配 “z” 或 “food” 。“(z|f)ood” 匹配 “zood” 或 “food”。</li>
+<li><strong> [xyz] </strong>&nbsp;&nbsp;: 字符集，匹配包含的任一字符，比如“[abcdef]” 可以匹配 abcdef任意一个字符。</li>
+<li><strong> [^xyz]</strong>&nbsp;&nbsp;: 反向字符集，匹配不是该集合中的字符， 比如“[^abcdef]” 可以匹配 任意一个不是abcdef的字符。</li>
+<li><strong> [A-Z] </strong>&nbsp;&nbsp;: 字符范围，从A到Z，比如“[a-z]”表示匹配从小写a到小写z的任意一个。</li>
+<li><strong> [^A-Z]</strong>&nbsp;&nbsp;: 反向字符范围，匹配不在这个字符范围的任意字符。</li>
+<li><strong>    \b </strong> &nbsp;&nbsp; :  匹配一个字边界，即字与空格间的位置。例如，”er\b” 表示在边界的er, 也就是匹配”never”中的”er”，但不匹配”verb”中的”er”。</li>
+<li><strong> \B  </strong> &nbsp;&nbsp;： 非字边界匹配。”er\B”匹配”verb”中的”er”，但不匹配”never”中的”er”。</li>
+<li><strong> \d  </strong> &nbsp;&nbsp;:  数字字符匹配。等效于 [0-9]。</li>
+<li><strong> \D  </strong> &nbsp;&nbsp;:  非数字字符匹配。等效于 [^0-9]。</li>
+<li><strong> \f  </strong> &nbsp;&nbsp;:  换页符匹配。等效于 \x0c 和 \cL。</li>
+<li><strong> \n  </strong> &nbsp;&nbsp;:  换行符匹配。等效于 \x0a 和 \cJ。</li>
+<li><strong> \r  </strong> &nbsp;&nbsp;:  匹配一个回车符。等效于 \x0d 和 \cM。</li>
+<li><strong> \s  </strong> &nbsp;&nbsp;:  匹配任何空白字符，包括空格、制表符、换页符等。与 [ \f\n\r\t\v] 等效。</li>
+<li><strong> \S  </strong> &nbsp;&nbsp;:  匹配任何非空白字符。与 [^ \f\n\r\t\v] 等效。</li>
+<li><strong> \t  </strong> &nbsp;&nbsp;:  制表符匹配。与 \x09 和 \cI 等效。</li>
+<li><strong> \v  </strong> &nbsp;&nbsp;:  垂直制表符匹配。与 \x0b 和 \cK 等效。</li>
+<li><strong> \w  </strong> &nbsp;&nbsp;:  匹配任何字类字符，包括下划线。与”[A-Za-z0-9_]”等效。</li>
+<li><strong> \W  </strong> &nbsp;&nbsp;:  与任何非单词字符匹配。与”[^A-Za-z0-9_]”等效。<br>(下面不常用)</li>
 <li>\xn  :  匹配 n，此处的 n 是一个十六进制转义码。十六进制转义码必须正好是两位数长。例如，”\x41”匹配”A”。”\x041”与”\x04”&amp;”1”等效。允许在正则表达式中使用 ASCII 代码。</li>
 <li>\num :  匹配 num，此处的 num 是一个正整数。到捕获匹配的反向引用。例如，”(.)\1”匹配两个连续的相同字符。</li>
 <li>\n   :  标识一个八进制转义码或反向引用。如果 \n 前面至少有 n 个捕获子表达式，那么 n 是反向引用。否则，如果 n 是八进制数 (0-7)，那么 n 是八进制转义码。</li>
@@ -438,14 +431,16 @@ jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
 <li>\un  :  匹配 n，其中 n 是以四位十六进制数表示的 Unicode 字符。例如，\u00A9 匹配版权符号 (©)。</li>
 </ol>
 </li>
+<li><h4 id="SQL中，判断一个值是不是null，用的是-is-null语句，比如："><a href="#SQL中，判断一个值是不是null，用的是-is-null语句，比如：" class="headerlink" title="SQL中，判断一个值是不是null，用的是 is null语句，比如："></a>SQL中，判断一个值是不是null，用的是 is null语句，比如：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select s.id, s.name</span><br><span class="line">from Students s left join Departments d</span><br><span class="line">on d.id = s.department_id</span><br><span class="line">where d.name is <span class="keyword">null</span>;</span><br><span class="line">	</span><br></pre></td></tr></table></figure></li>
+<li>#### </li>
 </ul>
 </li>
 <li><h3 id="algorithm"><a href="#algorithm" class="headerlink" title="algorithm"></a>algorithm</h3><ul>
-<li>Morris方法<br>  这个方法是用来做树的中序遍历的（inorder traverse），当然也可以直接recursive，将之前的二叉树变成一个只有右孩子的树，且顺序时inorder的。<br>  已知中序遍历是 左-根-右 的顺序，所以我们的目的是：将“根-右子树”放到左子树的最右边的节点上，直到所有节点都不含有左孩子，从而达到我们的目的。<br>  所以该方法的流程是：    <pre><code>1. 以根节点root为起点，记为当前节点cur;
+<li><h4 id="Morris方法"><a href="#Morris方法" class="headerlink" title="Morris方法"></a>Morris方法</h4>  这个方法是用来做树的中序遍历的（inorder traverse），当然也可以直接recursive，将之前的二叉树变成一个只有右孩子的树，且顺序时inorder的。<br>  已知中序遍历是 左-根-右 的顺序，所以我们的目的是：将“根-右子树”放到左子树的最右边的节点上，直到所有节点都不含有左孩子，从而达到我们的目的。<br>  所以该方法的流程是：    <pre><code>1. 以根节点root为起点，记为当前节点cur;
 2. 如果cur不存在左孩子，很好，向下走，将cur节点指向它的右孩子，即cur = cur.right;
                     否则，找到左子树中最右边的节点（rightmost node），将该节点的右孩子指向当前节点cur，即 rightmost.right = cur，然后当前节点指向它的左孩子，即cur = cur.left;
 3. 重复步骤2，直到cur节点为空
-</code></pre>   经过这样的步骤之后，我们就得到了一个按inorder排列的树，如果需要记录这个遍历，只需要在步骤2的第一个判断条件成立时记录当前节点的值即可。<br>   代码(inorder遍历根节点为root的二叉树，并返回)：   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; res = new ArrayList&lt;&gt;();</span><br><span class="line">TreeNode cur = root;</span><br><span class="line">while(cur != null)</span><br><span class="line">&#123;</span><br><span class="line">	if(cur.left == null)</span><br><span class="line">	&#123;</span><br><span class="line">		res.add(cur.val);</span><br><span class="line">		cur = cur.right;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		TreeNode pre = cur.left;</span><br><span class="line">		while(pre.right != null)</span><br><span class="line">		&#123;</span><br><span class="line">			pre = pre.right;</span><br><span class="line">		&#125;</span><br><span class="line">		pre.right = cur;</span><br><span class="line">		TreeNode temp = cur;</span><br><span class="line">		cur = cur.left;</span><br><span class="line">		temp.left = null;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">return res;</span><br></pre></td></tr></table></figure>
+</code></pre>   经过这样的步骤之后，我们就得到了一个按inorder排列的树，如果需要记录这个遍历，只需要在步骤2的第一个判断条件成立时记录当前节点的值即可。<br>   代码(inorder遍历根节点为root的二叉树，并返回)：   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">TreeNode cur = root;</span><br><span class="line"><span class="keyword">while</span>(cur != <span class="keyword">null</span>)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(cur.left == <span class="keyword">null</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		res.add(cur.val);</span><br><span class="line">		cur = cur.right;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		TreeNode pre = cur.left;</span><br><span class="line">		<span class="keyword">while</span>(pre.right != <span class="keyword">null</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			pre = pre.right;</span><br><span class="line">		&#125;</span><br><span class="line">		pre.right = cur;</span><br><span class="line">		TreeNode temp = cur;</span><br><span class="line">		cur = cur.left;</span><br><span class="line">		temp.left = <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> res;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -493,11 +488,11 @@ jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
           
             <a href="/tags/JAVA/" rel="tag"># JAVA</a>
           
+            <a href="/tags/PYTHON/" rel="tag"># PYTHON</a>
+          
             <a href="/tags/INTERVIEW/" rel="tag"># INTERVIEW</a>
           
             <a href="/tags/FUNDAMENT/" rel="tag"># FUNDAMENT</a>
-          
-            <a href="/tags/PYTHON/" rel="tag"># PYTHON</a>
           
         </div>
       
@@ -695,7 +690,7 @@ jsonArr2[0].name = &quot;sam&quot;;   //修改数组元素的值
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#WEB"><span class="nav-number">1.</span> <span class="nav-text">WEB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JAVA"><span class="nav-number">2.</span> <span class="nav-text">JAVA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#algorithm"><span class="nav-number">3.</span> <span class="nav-text">algorithm</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#WEB"><span class="nav-number">1.</span> <span class="nav-text">WEB</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Header中的内容一般是给浏览器看的，body的内容才是真正给user看的"><span class="nav-number">1.1.</span> <span class="nav-text">Header中的内容一般是给浏览器看的，body的内容才是真正给user看的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#爬虫的作用是根据tag来找到不同的内容"><span class="nav-number">1.2.</span> <span class="nav-text">爬虫的作用是根据tag来找到不同的内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用js-xlsx包读取本地excel文件时，通过XLSX-read方法会获得一个workbook对象，然后通过"><span class="nav-number">1.3.</span> <span class="nav-text">用js-xlsx包读取本地excel文件时，通过XLSX.read方法会获得一个workbook对象，然后通过</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JAVA"><span class="nav-number">2.</span> <span class="nav-text">JAVA</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Queue的初始化-要用链表：’Queue-queue-LinkedList-lt-gt"><span class="nav-number">2.1.</span> <span class="nav-text">Queue的初始化, 要用链表：’Queue queue = LinkedList&lt;&gt;();</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String的indexOF方法："><span class="nav-number">2.2.</span> <span class="nav-text">String的indexOF方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String-replaceAll-String-regex-String-replacement-其中第一个是需要替换的部分的正则表达式，即遇到符合这个的，替换"><span class="nav-number">2.3.</span> <span class="nav-text">String.replaceAll(String regex, String replacement), 其中第一个是需要替换的部分的正则表达式，即遇到符合这个的，替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java正则表达式语法："><span class="nav-number">2.4.</span> <span class="nav-text">Java正则表达式语法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL中，判断一个值是不是null，用的是-is-null语句，比如："><span class="nav-number">2.5.</span> <span class="nav-text">SQL中，判断一个值是不是null，用的是 is null语句，比如：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#algorithm"><span class="nav-number">3.</span> <span class="nav-text">algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Morris方法"><span class="nav-number">3.1.</span> <span class="nav-text">Morris方法</span></a></li></ol></li></ol></div>
             
 
           </div>
