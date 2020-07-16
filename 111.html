@@ -104,9 +104,9 @@
 	</div>
 	<script>
 			
-			var q1,t1,a1;		//��ʼ���������������ͣ�����
-            var wb;//��ȡ���ɵ�����
-            var rABS = false; //�Ƿ����ļ���ȡΪ�������ַ���
+			var q1,t1,a1;		//��ʼ���������������ͣ���
+            var wb;//��ȡ��ɵ�����
+            var rABS = false; //�Ƿ��ļ���ȡΪ�������ַ���
 			var jsondata;		//�����ϴ�����������
 			var length;			//���ݸ���
 			
@@ -129,10 +129,10 @@
                         });
                     }
 					
-					// XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]) ���Ǹ�json object���ص�������ô������������������Ҫ������					
+					// XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]) ���Ǹ�json object���ص�������ô�����������������Ҫ������					
 					jsondata = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
 					length = jsondata.length;
-					//��ȡ����������֮������������������������һ������, Math.random() ����[0,1)��������
+					//��ȡ����������֮������������������һ������, Math.random() ����[0,1)�������
 					var rn = parseInt( Math.random()*(length),10);
 				
 					q1 = jsondata[rn].Description;
